@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="/alphacode.Cadastro_Contatos/assets/logo_alphacode.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="/alphacode.Cadastro_Contatos/assets/logo_alphacode.png" alt="alpha_Code_Logo">
+        </div>
+        <div id="titulo">
+            <h1>Cadastro de Contatos</h1>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profissao">Profissão</label>
+                <input type="text" id="profissao" name="profissao" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Data de nascimento:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone para contato</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+
+            <div class="form-group">
+                <label for="celular">Celular para contato</label>
+                <input type="tel" id="celular" name="celular" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkbox1">Número de celular possui Whatsapp</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1" value="opcao1">
+            </div>
+
+            <div class="form-group">
+                <label for="checkbox2">Enviar notificações por SMS</label>
+                <input type="checkbox" id="checkbox2" name="checkbox2" value="opcao2">
+            </div>
+
+            <div class="form-group">
+                <label for="checkbox3">Enviar notificações por E-mail</label>
+                <input type="checkbox" id="checkbox3" name="checkbox3" value="opcao3">
+            </div>
+
+            <button id="cadastrar" type="submit">Cadastrar contato</button>
+        </form>
+
+        <table id="tabela-contatos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>E-mail</th> 
+                    <th>Celular para contato</th>
+                    <th>ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-contatos">
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div id="rodape">
+            <p>Termos | Políticas</p>
+            <p>© Copyright 2022 | Desenvolvido por</p>
+            <img src="/alphacode.Cadastro_Contatos/assets/logo_rodape_alphacode.png">
+            <p>©Alphacode IT Solutions 2022</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
