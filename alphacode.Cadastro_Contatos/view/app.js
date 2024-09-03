@@ -23,13 +23,31 @@ form.addEventListener('submit', (e) => {
     <td>${celular}</td>
     <td>
        <img src="/alphacode.Cadastro_Contatos/assets/editar.png" class="editar" title="Editar">
-      <img src="/alphacode.Cadastro_Contatos/assets/excluir.png" class="excluir" title="Excluir">
+      <img src="/alphacode.Cada
+      stro_Contatos/assets/excluir.png" class="excluir" title="Excluir">
     </td>
   `;
 
-  // Adicione a linha à tabela
+  const formData = {
+    nome,
+    dataNascimento,
+    email,
+    celular
+  };
+
+  
+  fetch('/salvar-contato', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+  
   tabelaContatos.appendChild(linha);
 
-  // Limpe os campos do formulário
   form.reset();
 });
